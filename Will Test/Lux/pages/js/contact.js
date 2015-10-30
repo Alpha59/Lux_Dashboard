@@ -19,7 +19,7 @@ function Contact(divId, options) {
 	
 	// Replace/add functions on the backend when necessary
 	if (typeof options === 'object') {
-		for (var key in in options) {
+		for (var key in options) {
 			if (options.hasOwnProperty(key) && Object.prototype.toString.call(options[key]) == '[object Function]')
 				this.server[key] = options[key];
 		}
