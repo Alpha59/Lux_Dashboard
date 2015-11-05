@@ -1,7 +1,7 @@
 (function(){
 var AdManagement = function(params){
 	// inhert non-static functionality
-	AssetManagerLib.apply(this, params);
+	AssetManagementLib.apply(this, params);
 
 	/* 
  *
@@ -27,9 +27,9 @@ var params = {
 		 auto_save : false
 		,auto_save_callback : Server[placement].AutoSave
 		,save_button : true
-		,save_placement : AssetManagerMain_placement.BOTTOM
+		,save_placement : AssetManagementMain_placement.BOTTOM
 		,cancel_button : true
-		,cancel_placement : AssetManagerMain_placement.BOTTOM
+		,cancel_placement : AssetManagementMain_placement.BOTTOM
 		,populate_default_values: false
 		,asset_category : "Advert"
 		,save_button_callback : Server[placement].Save
@@ -94,25 +94,25 @@ var params = {
 		 allow_remove : true
 		,remove_button_callback : Server[placement].Remove
 		,allow_create : true
-		,create_placement : AssetManagerNav_placement.TOP
+		,create_placement : AssetManagementNav_placement.TOP
 		,display_unsaved : true
 		,nested_navigation : false
 		,nested_naviation_field : undefined
 		,allow_create_nested : false
 		,allow_filter : true
 		,allow_filter_field : "name"
-		,filter_placement : AssetManagerNav_placement.TOP
+		,filter_placement : AssetManagementNav_placement.TOP
 		,allow_local_export : true
-		,export_placement : AssetManagerNav_placement.BOTTOM
+		,export_placement : AssetManagementNav_placement.BOTTOM
 		,allow_rename : true
 		,rename_button_callback : Server[placement].Rename
-		,rename_placement : AssetManagerNav_placement.BOTTOM
+		,rename_placement : AssetManagementNav_placement.BOTTOM
 		,show_expired : true // allows filtering by expired values
 	}
 }
 
 // inhert Static functionailty
-AdManagement.prototype = new AssetManagerLib(params);	
+AdManagement.prototype = new AssetManagementLib(params);	
 
 // Create a new instance of the Class
 var adManagement = new AdManagement(params);
