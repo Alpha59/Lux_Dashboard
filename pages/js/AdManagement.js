@@ -33,6 +33,7 @@ var params = {
 		,populate_default_values: false
 		,asset_category : "Advert"
 		,save_button_callback : Server[placement].Save
+		,allow_arbitrary_fields : false
 		,fields : [
 			{
 				 name : "_id"
@@ -62,7 +63,7 @@ var params = {
 				,hidden : false
 				,exclude_if_blank: false
 				,requried : false
-				,subElements: [
+				,subFields: [
 					 { 
 						 name: "Start Date"
 						,field_name : "start_date"
