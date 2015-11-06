@@ -39,6 +39,7 @@ var params = {
 		 allow_remove : false
 		,allow_rename : false
 		,allow_filter_field : "username"
+		,query_callback : Server[placement].Query
 	}
 }
 

@@ -34,6 +34,7 @@ var params = {
 		,allow_rename : false
 		,allow_filter_field : "username"
 		,allow_local_export : false
+		,query_callback : Server[placement].Query
 	}
 }
 

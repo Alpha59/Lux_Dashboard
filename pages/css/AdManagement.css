@@ -1,7 +1,7 @@
-#AdManager {
+.AdManagement {
 
 /*
- * This is where you can customize the size of the AdManager
+ * This is where you can customize the size of the
  * or any other overarching parameters that are not 
  * customizd in the AssetManagement.css
  *
@@ -16,3 +16,9 @@
  *
  */
 
+/*
+ * The best way to change behavior inside any given class 
+ * is going to be to target elements inside with specific 
+ * query selectors: .className div {}  | .className a {}
+ * so that the javascript is not littered with classNames. 
+ */

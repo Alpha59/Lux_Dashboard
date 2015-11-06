@@ -1,7 +1,8 @@
 (function(){
-var MailManagement = function(params){
+require('lib/js/AssetManagementLib.js');
+var AdManagement = function(params){
 	// inhert non-static functionality
-	AssetManagementLib.apply(this, arguments);
+	AdManagement.apply(this, arguments);
 
 	/* 
  *
@@ -16,7 +17,7 @@ var MailManagement = function(params){
 };
 
 // Name is brought out so I don't have to retype is a bunch
-var placement = "MailManagement";
+var placement = "AdManagement";
 
 // This is the set-up portion, and defines all of the functionality
 // EDITABLE:
@@ -43,8 +44,8 @@ var params = {
 }
 
 // inhert Static functionailty
-MailManagement.prototype = new AssetManagementLib(params);	
+AdManagement.prototype = new AssetManagementLib(params);	
 
 // Create a new instance of the Class
-var mailManagement = new MailManagement(params);
+var adManagement = new AdManagement(params);
 })();

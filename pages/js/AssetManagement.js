@@ -39,6 +39,7 @@ var params = {
 	,nav_params : {
 		 remove_button_callback : Server[placement].Remove
 		,rename_button_callback : Server[placement].Rename
+		,query_callback : Server[placement].Query
 	}
 }
 
