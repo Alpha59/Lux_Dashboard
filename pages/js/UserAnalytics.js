@@ -1,8 +1,7 @@
-
 (function(){
 var UserAnalytics = function(params){
 	// inhert non-static functionality
-	AssetManagementLib.apply(this, params);
+	AssetManagementLib.apply(this, arguments);
 
 	/* 
  *
@@ -25,7 +24,7 @@ var params = {
 	 placement : placement
 	,main_section_lib : "AnalyticsMain"
 	,main_section_params :{
-		,fields : [
+		fields : [
 			{
 			}
 		]

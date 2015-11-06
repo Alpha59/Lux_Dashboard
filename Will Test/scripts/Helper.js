@@ -7,11 +7,11 @@ Helper = {
 			result[item[0]] = decodeURIComponent(item[1]);
 		});
 		return result;
-    },
+    	},
 	insertAfter: function(newNode, referenceNode) {
         referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-    },
-    require: function(file, callback) {
+    	},
+    	require: function(file, callback) {
 		var scripts = document.getElementsByTagName('script');
 		var found = false;
 		
@@ -47,7 +47,7 @@ Helper = {
 		}
 		
         return true;
-    },
+    	},
 	insertNavObject: function(data, placement) {
 		if (typeof data.anchor !== 'undefined') {
 			var li = document.createElement('li');

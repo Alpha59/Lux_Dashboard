@@ -1,7 +1,8 @@
 (function(){
+require('lib/js/AssetManagementLib.js');
 var AdminProfileManagement = function(params){
 	// inhert non-static functionality
-	AdminProfileManagement.apply(this, params);
+	AdminProfileManagement.apply(this, arguments);
 
 	/* 
  *
@@ -23,7 +24,7 @@ var placement = "AdminProfileManagement";
 var params = {
 	 placement : placement
 	,main_section_params :{
-		,save_button_callback : Server[placement].Save
+		 save_button_callback : Server[placement].Save
 		,fields : [
 			{
 				 name : "_id"
