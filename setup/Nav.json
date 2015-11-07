@@ -78,7 +78,7 @@
 				 }
 				,{
 					 "name": "System Mailing"
-					,"base": "MailingManagement"
+					,"base": "MailManagement"
 					,"description": "" 
 				 }
 			]

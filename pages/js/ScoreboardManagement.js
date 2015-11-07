@@ -1,8 +1,8 @@
 (function(){
-var ScoreboardManagement = function(params){
+Helper.require('lib/js/AssetManagementLib.js');
+var PageObject = function(params){
 	// inhert non-static functionality
 	AssetManagementLib.apply(this, arguments);
-
 	/* 
  *
  *	EDITABLE:
@@ -15,32 +15,20 @@ var ScoreboardManagement = function(params){
   	*/
 };
 
-// Name is brought out so I don't have to retype is a bunch
-var placement = "ScoreboardManagement";
 
-// This is the set-up portion, and defines all of the functionality
-// EDITABLE:
-var params = {
-	 placement : placement
-	,main_section_lib : "TableMain"
-	,main_section_params :{
-		 save_button_callback : Server[placement].Save
-		,fields : [
-			{
-			}
-		]
-	}
-	,nav_params : {
-		 allow_remove : false
-		,allow_rename : false
-		,allow_filter_field : "username"
-		,query_callback : Server[placement].Query
-	}
-}
+// get current script full name, split into array along path
+var scriptNameArray = document.currentScript.src.split("/");
+// take array, and remove file extension from file by splitting 
+var scriptName = scriptNameArray[scriptNameArray.length-1].split(".")[0]; 
 
-// inhert Static functionailty
-ScoreboardManagement.prototype = new AssetManagementLib(params);	
+
+// Pull/Parse Setup doc from file
+Helper.loadHTML('pages/setup/'+scriptName+'.json', function(data){
+	var setup_params = JSON.parse(data, Helper.callbackStr2FunctionRef);
+	// inhert Static functionailty
+	PageObject.prototype = new AssetManagementLib(setup_params);	
+	var pageObject = new PageObject(setup_params);
+});
 
 // Create a new instance of the Class
-var scoreboardManagement = new ScoreboardManagement(params);
 })();
