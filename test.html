@@ -1,0 +1,20 @@
+<html>
+<head>
+<script type="text/javascript" src="lib/js/Helper.js"></script>
+<script type="text/javascript" src="lib/js/Server.js"></script>
+<script>
+	console.log("test");
+	Server.ContentManagement.Query({}, function(data){
+		console.log("Sucess");
+		console.log(data);
+	}, function(data){
+		console.log("Error");
+		console.log(data);
+	});
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
